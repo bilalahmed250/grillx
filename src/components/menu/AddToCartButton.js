@@ -10,7 +10,7 @@ export default function AddToCartButton({
     return (
       <div className="flying-button-parent mt-4">
         <FlyingButton targetTop={"5%"} targetLeft={"95%"} src={image}>
-          <div onClick={onClick}>Add to cart Rs {basePrice}</div>
+          <div onClick={onClick} className=" bg-[#FFA500] text-white rounded-full px-8" >Add to cart</div>
         </FlyingButton>
       </div>
     );
@@ -21,7 +21,7 @@ export default function AddToCartButton({
       onClick={onClick}
       className="mt-4 bg-[#FFA500] text-white rounded-full px-8 py-2"
     >
-      <span>Add to cart (from Rs {basePrice})</span>
+      <span>Add to cart</span>
     </button>
   );
 }

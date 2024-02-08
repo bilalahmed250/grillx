@@ -2,8 +2,7 @@
 import MenuItem from "@/components/menu/MenuItem";
 
 import { useEffect, useState } from "react";
-import SectionHeaders from "./SectionHeaders";
-
+import Loader from "@/components/icons/Loader";
 export default function HomeMenu() {
   const [categories, setCategories] = useState([]);
   const [menuItems, setMenuItems] = useState([]);
@@ -17,15 +16,14 @@ export default function HomeMenu() {
         setCategories(categoriesData);
 
         const menuItemsResponse = await fetch("/api/menu-items");
-        console.log("menuItemsData:", menuItemsResponse); // Add this line
         const menuItemsData = await menuItemsResponse.json();
-        console.log("menuItemsData:", menuItemsData); // Add this line
         setMenuItems(menuItemsData);
 
-        setLoading(false); // Set loading to false when both API calls are complete
+        setLoading(false);
+       
       } catch (error) {
         console.error("Error fetching data:", error);
-        setLoading(false); // Set loading to false in case of an error
+        setLoading(false);
       }
     };
 
@@ -35,27 +33,23 @@ export default function HomeMenu() {
   const dealsCategory = categories.find(
     (category) => category.name === "Deals"
   );
-  console.log("menuItems", menuItems);
   return (
-    <section className="mt-8">
+    <section className="mt-14">
+      <div className="text-center text-[#FFA500] font-bold text-4xl italic mb-12">
+        Our Best Sellers
+      </div>
       {loading ? (
-        <p>Loading best sellers for you.....</p>
+        <div className="flex items-center justify-center" style={{width:"100%"}}>
+          <Loader />
+        </div>
       ) : (
-        dealsCategory && (
-          <div>
-            <div className="text-center text-[#FFA500] font-bold text-4xl italic">
-              <SectionHeaders mainHeader={dealsCategory.name} />
-              Our Best Sellers
-            </div>
-            <div className="grid sm:grid-cols-3 gap-4 mt-6 mb-12">
-              {menuItems
-                ?.filter((item) => item.category === dealsCategory._id)
-                .map((item) => (
-                  <MenuItem key={item._id} {...item} />
-                ))}
-            </div>
-          </div>
-        )
+        <div className="grid sm:grid-cols-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-6 mb-12">
+          {menuItems
+            ?.filter((item) => item.category === dealsCategory._id)
+            .map((item) => (
+              <MenuItem key={item._id} {...item} />
+            ))}
+        </div>
       )}
     </section>
   );

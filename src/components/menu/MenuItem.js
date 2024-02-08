@@ -50,14 +50,14 @@ export default function MenuItem(menuItem) {
       {showPopup && (
         <div
           onClick={() => setShowPopup(false)}
-          className="fixed inset-0 bg-black/80 flex items-center justify-center"
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-40"
         >
           <div
             onClick={(ev) => ev.stopPropagation()}
             className="my-8 bg-white p-2 rounded-lg max-w-md"
           >
             <div
-              className="overflow-y-scroll p-2"
+              className="overflow-y-scroll p-2 popupClass"
               style={{ maxHeight: "calc(100vh - 100px)" }}
             >
               <Image
@@ -111,15 +111,20 @@ export default function MenuItem(menuItem) {
                   ))}
                 </div>
               )}
-              <FlyingButton targetTop={"5%"} targetLeft={"95%"} src={image}>
-                <div
-                  className="primary sticky bottom-2"
-                  onClick={handleAddToCartButtonClick}
-                >
-                  Add to cart Rs {selectedPrice}
-                </div>
-              </FlyingButton>
-              <button className="mt-2" onClick={() => setShowPopup(false)}>
+              <div className="mt-2 hover:bg-[#FFA500] hover:text-white rounded-2xl">
+                <FlyingButton targetTop={"5%"} targetLeft={"95%"} src={image}>
+                  <div
+                    className="primary sticky bottom-2 hover:text-white"
+                    onClick={handleAddToCartButtonClick}
+                  >
+                    Add to cart Rs {selectedPrice}
+                  </div>
+                </FlyingButton>
+              </div>
+              <button
+                className="mt-2 hover:bg-[#FFA500] hover:text-white"
+                onClick={() => setShowPopup(false)}
+              >
                 Cancel
               </button>
             </div>
