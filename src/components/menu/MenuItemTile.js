@@ -15,8 +15,8 @@ export default function MenuItemTile({ onAddToCart, ...item }) {
   return (
     <div className="relative bg-gray-200 p-4 rounded-lg text-center group hover:bg-white hover:shadow-md hover:shadow-black/25 transition-all flex flex-col items-center justify-start">
       <div className="relative">
-        <div className="absolute top-1 right-1 z-10 bg-[#FFA500] rounded-full h-10 w-10 flex items-center justify-center text-white">
-          {basePrice}
+        <div className="absolute top-1 right-1 z-10 bg-[#FFA500] rounded-full h-10 w-20 flex items-center justify-center text-white">
+          Rs {basePrice}
         </div>
         <div
           className="text-center h-52 md:w-56"
