@@ -11,7 +11,6 @@ export default function MenuItemTile({ onAddToCart, ...item }) {
   const descriptionHeight = "60px";
   const buttonHeight = "40px";
 
-  
   return (
     <div className="relative bg-gray-200 p-4 rounded-lg text-center group hover:bg-white hover:shadow-md hover:shadow-black/25 transition-all flex flex-col items-center justify-start">
       <div className="relative">

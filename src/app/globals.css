@@ -72,6 +72,24 @@ div.tabs > *.active {
   background-color: #a3a3a3;
 }
 
+.cartClass{
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 16px;
+}
+.cartClass::-webkit-scrollbar {
+  width: 4px;
+}
+
+.cartClass::-webkit-scrollbar-thumb {
+  background-color: #a3a3a3;
+  border-radius: 4px;
+}
+
+.cartClass::-webkit-scrollbar-thumb:hover {
+  background-color: #a3a3a3;
+}
+
 .menu-container {
   position: sticky;
   top: 0;
@@ -79,3 +97,11 @@ div.tabs > *.active {
   background-color: white;
   height: 100%;
 }
+/* .menuHeader {
+  position: sticky;
+  top: 0;
+  z-index: 49;
+  background-color: white;
+  height: 50px;
+  padding-top: 7px;
+} */
