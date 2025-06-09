@@ -6,12 +6,9 @@ import React, { useState, useEffect } from "react";
 
 const Carousel = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-  const slides = [
-    "/banner4.png",
-    "/banner5.png",
-  ];
+  const slides = ["/broastt1.jpg", "/broast2.jpg"];
 
-  const slideInterval = 2000;
+  const slideInterval = 3500;
   useEffect(() => {
     const interval = setInterval(goToNextSlide, slideInterval);
     return () => clearInterval(interval);
@@ -36,7 +33,6 @@ const Carousel = () => {
       id="default-carousel"
       className="relative w-full rounded-full hidden lg:block sm:block"
       data-carousel="slide"
-      
     >
       <div className="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
         {slides.map((slide, index) => (

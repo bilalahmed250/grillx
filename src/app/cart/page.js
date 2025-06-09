@@ -11,7 +11,6 @@ export default function CartPage() {
     useContext(CartContext);
   const [address, setAddress] = useState({});
 
-
   function handleAddressChange(propName, value) {
     setAddress((prevAddress) => ({ ...prevAddress, [propName]: value }));
   }
@@ -36,61 +35,104 @@ export default function CartPage() {
   );
   const itemNameCount = new Set(cartProducts.map((item) => item.name)).size;
 
+  // function sendwhatsapp() {
+  //   if (cartProducts.length === 0) {
+  //     // Show an alert
+  //     alert(
+  //       "PLEASE GENERATE THE CHECKOUT DETAILS FIRST \nOR \nCALL US FOR HOME DELIVERY 0300-4002687 "
+  //     );
+  //     return;
+  //   } else {
+  //     const phonenumber = "+923004002687";
+
+  //     const itemsInfo = cartProducts.map((item) => {
+  //       const sizeName = item?.size?.name || "Regular";
+  //       const basePrice = item?.basePrice;
+  //       const sizePrice = item?.size?.price
+  //         ? basePrice + item.size.price
+  //         : basePrice;
+
+  //       const totalPrice = sizePrice;
+
+  //       const extras =
+  //         item?.extras && item.extras.length > 0
+  //           ? `Extras: ${item.extras.map((extra) => extra.name).join(", ")}`
+  //           : "";
+
+  //       const extrasText = extras ? `, ${extras}` : "";
+
+  //       return `*Food Name*: ${item?.name}, Qty: ${item?.count}, Size: ${sizeName}, price: ${totalPrice} ${extrasText}`;
+  //     });
+  //     const itemsText = itemsInfo.join("%0a");
+  //     console.log("itemsText", itemsText);
+
+  //     var url =
+  //       "https://wa.me/" +
+  //       phonenumber +
+  //       "?text=" +
+  //       "" +
+  //       itemsText +
+  //       "%0a" +
+  //       "*Total Items:* " +
+  //       itemNameCount +
+  //       "%0a" +
+  //       "*Total Quantity Order:* " +
+  //       count +
+  //       "%0a" +
+  //       "*Total Bill:* " +
+  //       subtotal +
+  //       "%0a%0a" +
+  //       "*Phone Number:* " +
+  //       address?.phone +
+  //       "%0a%0a" +
+  //       "*Address:* " +
+  //       address?.streetAddress;
+
+  //     window.open(url, "_blank").focus();
+  //   }
+  // }
   function sendwhatsapp() {
     if (cartProducts.length === 0) {
-      // Show an alert
       alert(
         "PLEASE GENERATE THE CHECKOUT DETAILS FIRST \nOR \nCALL US FOR HOME DELIVERY 0300-4002687 "
       );
       return;
-    } else {
-      const phonenumber = "+923004002687";
-
-      const itemsInfo = cartProducts.map((item) => {
-        const sizeName = item?.size?.name || "Regular";
-        const basePrice = item?.basePrice;
-        const sizePrice = item?.size?.price
-          ? basePrice + item.size.price
-          : basePrice;
-
-        const totalPrice = sizePrice;
-
-        const extras =
-          item?.extras && item.extras.length > 0
-            ? `Extras: ${item.extras.map((extra) => extra.name).join(", ")}`
-            : "";
-
-        const extrasText = extras ? `, ${extras}` : "";
-
-        return `*Food Name*: ${item?.name}, Qty: ${item?.count}, Size: ${sizeName}, price: ${totalPrice} ${extrasText}`;
-      });
-      const itemsText = itemsInfo.join("%0a");
-      console.log("itemsText", itemsText);
-
-      var url =
-        "https://wa.me/" +
-        phonenumber +
-        "?text=" +
-        "" +
-        itemsText +
-        "%0a" +
-        "*Total Items:* " +
-        itemNameCount +
-        "%0a" +
-        "*Total Quantity Order:* " +
-        count +
-        "%0a" +
-        "*Total Bill:* " +
-        subtotal +
-        "%0a%0a" +
-        "*Phone Number:* " +
-        address?.phone +
-        "%0a%0a" +
-        "*Address:* " +
-        address?.streetAddress;
-
-      window.open(url, "_blank").focus();
     }
+
+    const phonenumber = "923004002687"; // No plus sign
+    const itemsInfo = cartProducts.map((item) => {
+      const sizeName = item?.size?.name || "Regular";
+      const basePrice = item?.basePrice || 0;
+      const sizePrice = item?.size?.price
+        ? basePrice + item.size.price
+        : basePrice;
+
+      const extras =
+        item?.extras && item.extras.length > 0
+          ? `Extras: ${item.extras.map((extra) => extra.name).join(", ")}`
+          : "";
+
+      const extrasText = extras ? `, ${extras}` : "";
+
+      return `*Food Name:* ${item?.name}, Qty: ${item?.count}, Size: ${sizeName}, price: Rs ${sizePrice} ${extrasText}`;
+    });
+
+    const itemsText = itemsInfo.join("\n");
+
+    const message =
+      `${itemsText}\n\n` +
+      `*Total Items:* ${itemNameCount}\n` +
+      `*Total Quantity Order:* ${count}\n` +
+      `*Total Bill:* Rs ${subtotal}\n\n` +
+      `*Phone Number:* ${address?.phone || ""}\n` +
+      `*Address:* ${address?.streetAddress || ""}`;
+
+    const encodedMessage = encodeURIComponent(message);
+
+    // ✅ Use this updated URL:
+    const url = `https://api.whatsapp.com/send/?phone=${phonenumber}&text=${encodedMessage}&type=phone_number&app_absent=0`;
+
+    window.open(url, "_blank");
   }
 
   return (

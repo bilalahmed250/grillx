@@ -5,16 +5,17 @@ import { useContext, useState } from "react";
 import FlyingButton from "react-flying-item";
 import toast from "react-hot-toast";
 
-export default function MenuItem(menuItem) {
+export default function MenuItem({ menuItem }) {
   const { image, name, description, basePrice, sizes, extraIngredientPrices } =
     menuItem;
+  console.log("HELLO", menuItem, sizes);
   const [selectedSize, setSelectedSize] = useState(sizes?.[0] || null);
   const [selectedExtras, setSelectedExtras] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
   const { addToCart } = useContext(CartContext);
 
   async function handleAddToCartButtonClick() {
-    const hasOptions = sizes.length > 0 || extraIngredientPrices.length > 0;
+    const hasOptions = sizes?.length > 0 || extraIngredientPrices?.length > 0;
     if (hasOptions && !showPopup) {
       setShowPopup(true);
       return;
@@ -90,6 +91,7 @@ export default function MenuItem(menuItem) {
                   ))}
                 </div>
               )}
+
               {extraIngredientPrices?.length > 0 && (
                 <div className="py-2">
                   <h3 className="text-center text-gray-700">Any extras?</h3>
