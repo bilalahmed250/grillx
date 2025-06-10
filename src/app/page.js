@@ -15,7 +15,7 @@ export default function Home() {
             delight! We take pride in crafting a diverse menu that caters to
             every palate. Indulge in our mouthwatering burgers, artfully crafted
             pizzas, soul-soothing soups, flavorful wraps, crispy fries, and an
-            array of succulent steaks.
+            array of succulent steaks..
           </p>
           <p>
             At Grill X, we are not just a restaurant; we are an experience,
