@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 
 const Carousel = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-  const slides = ["/broastt1.jpg", "/broast2.jpg"];
+  const slides = ["/broastt1.jpg"];
 
   const slideInterval = 3500;
   useEffect(() => {
@@ -24,7 +24,7 @@ const Carousel = () => {
 
   const goToPrevSlide = () => {
     setCurrentSlideIndex(
-      (currentSlideIndex - 1 + slides.length) % slides.length
+      (currentSlideIndex - 1 + slides.length) % slides.length,
     );
   };
 

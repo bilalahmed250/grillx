@@ -16,23 +16,35 @@ export default function HomeMenu() {
       image: "/broastt1.jpg",
       category: "broast",
       sizes: [
-        { _id: "s1", name: "Quater", price: 0 },
-        { _id: "s2", name: "Half Broast", price: 500 },
-        { _id: "s3", name: "Full Broast", price: 1600 },
+        {
+          _id: "s1",
+          name: "Quater Broats - Leg, Thigh, fries , Dip sauce, Bun",
+          price: 0,
+        },
+        {
+          _id: "s2",
+          name: "Half Broast - 2-Leg, 2-Thigh, 1-Bun, 1-fries, 2-Dips",
+          price: 600,
+        },
+        {
+          _id: "s3",
+          name: "Full Broast - 4-Leg, 4-Thigh,  2-Bun, 2-fries, 4-Dips",
+          price: 1800,
+        },
       ],
     },
     {
       _id: "2",
-      name: "Special Pizza",
+      name: "Grill-X Special Pizza",
       description:
         "A Special Pizza is a term used to describe a pizza that typically features a combination of various toppings, making it a more elaborate and flavorful option than a standard pizza. The toppings included on a Special Pizza can vary depending on the preferences of the pizzeria or the customer, but they often include a mix of meats, vegetables, and sometimes even unique ingredients or gourmet toppings. Common toppings found on a Special Pizza may include pepperoni, sausage, mushrooms, onions, bell peppers, olives, tomatoes, and various types of cheese. Some Special Pizzas may also feature premium toppings such as prosciutto, artichoke hearts, sun-dried tomatoes, or truffle oil",
-      basePrice: 750,
+      basePrice: 800,
       image: "/pizza11.jpg",
       category: "pizza",
       sizes: [
         { _id: "s1", name: "small", price: 0 },
         { _id: "s2", name: "medium", price: 500 },
-        { _id: "s3", name: "Large", price: 900 },
+        { _id: "s3", name: "Large", price: 1000 },
       ],
       extraIngredientPrices: [
         { _id: "s1", name: "Extra Topping Cheese small", price: 150 },
@@ -54,7 +66,7 @@ export default function HomeMenu() {
       sizes: [
         { _id: "s1", name: "small", price: 0 },
         { _id: "s2", name: "medium", price: 500 },
-        { _id: "s3", name: "Large", price: 900 },
+        { _id: "s3", name: "Large", price: 1000 },
       ],
       extraIngredientPrices: [
         { _id: "s1", name: "Extra Topping Cheese small", price: 150 },
@@ -98,7 +110,7 @@ export default function HomeMenu() {
       sizes: [
         { _id: "s1", name: "small", price: 0 },
         { _id: "s2", name: "medium", price: 500 },
-        { _id: "s3", name: "Large", price: 900 },
+        { _id: "s3", name: "Large", price: 1000 },
       ],
       extraIngredientPrices: [
         { _id: "s1", name: "Extra Topping Cheese small", price: 150 },
@@ -114,7 +126,7 @@ export default function HomeMenu() {
       name: "Tarragon Steak",
       description:
         "Tarragon Steak is a dish featuring a tender steak seasoned with aromatic tarragon herb. The steak is typically seasoned with salt, pepper, and fresh or dried tarragon before being grilled, broiled, or pan-seared to desired doneness.",
-      basePrice: 1050,
+      basePrice: 1290,
       image: "/TSTEAK.jpg",
       category: "steak",
     },
@@ -123,7 +135,7 @@ export default function HomeMenu() {
       name: "Mushroom Steak",
       description:
         "A Grilled Chicken and Cheese Sandwich is a delicious combination of tender grilled chicken and melted cheese sandwiched between two slices of bread. The grilled chicken is typically seasoned with herbs and spices, then grilled until cooked through and flavorful.",
-      basePrice: 1050,
+      basePrice: 1290,
       image: "/MS.jpg",
       category: "steak",
     },
@@ -132,7 +144,7 @@ export default function HomeMenu() {
       name: "Tarragon Chicken Steak",
       description:
         "Tarragon Steak is a dish featuring a tender steak seasoned with aromatic tarragon herb. The steak is typically seasoned with salt, pepper, and fresh or dried tarragon before being grilled, broiled, or pan-seared to desired doneness.",
-      basePrice: 1050,
+      basePrice: 1290,
       image: "/TCS.png",
       category: "steak",
     },
@@ -141,7 +153,7 @@ export default function HomeMenu() {
       name: "Shami Burger",
       description:
         "Shami Burger is a flavorful and spicy burger that features a patty made from Shami kebab",
-      basePrice: 250,
+      basePrice: 280,
       image: "/SB.jpg",
       category: "burger",
     },
@@ -150,7 +162,7 @@ export default function HomeMenu() {
       name: "Yum Pum Burger",
       description:
         "Yum Pum Burger is a flavorful burger featuring a juicy beef patty topped with tangy barbecue sauce, melted cheese, crispy bacon, and fresh lettuce and tomato, all nestled within a soft sesame seed bun. It's a mouthwatering delight that satisfies cravings with every bite.",
-      basePrice: 550,
+      basePrice: 580,
       image: "/YPB.jpg",
       category: "burger",
     },
@@ -164,11 +176,20 @@ export default function HomeMenu() {
       category: "burger",
     },
     {
+      _id: "b5",
+      name: "Zinger Burger",
+      description:
+        "A Zinger Burger is a spicy and flavorful chicken sandwich typically consisting of a crispy breaded chicken fillet seasoned with a blend of spices, served on a soft bun with lettuce, mayonnaise or spicy sauce, and sometimes topped with cheese and pickles..",
+      basePrice: 460,
+      image: "/ZB.jpg",
+      category: "burger",
+    },
+    {
       _id: "9",
       name: "Shawarma Platter",
       description:
         "A Shawarma Platter typically consists of thinly sliced, marinated meat—such as chicken, beef, or lamb—that has been cooked on a vertical rotisserie. The meat is served on a large platter alongside accompaniments such as rice, salad, pickled vegetables, hummus, tahini sauce, and pita bread or flatbread..",
-      basePrice: 630,
+      basePrice: 650,
       image: "/SPLATER.jpg",
       category: "wrap",
     },
@@ -177,22 +198,9 @@ export default function HomeMenu() {
       name: "Fettuccine Alfredo",
       description:
         "Fettuccine Alfredo is a classic Italian pasta dish made with long, flat noodles (fettuccine) tossed in a creamy sauce made from butter, heavy cream, and Parmesan cheese.",
-      basePrice: 750,
+      basePrice: 800,
       image: "/FAPASTA.jpg",
       category: "pasta",
-    },
-    {
-      _id: "12",
-      name: "Crispy Chicken Stripes",
-      description:
-        "Chicken Stripe Wings could potentially refer to chicken wings that have been prepared.",
-      basePrice: 350,
-      image: "/CWS.png",
-      category: "appetizer",
-      sizes: [
-        { _id: "s1", name: "5-Pieces", price: 0 },
-        { _id: "s2", name: "10-Pieces", price: 330 },
-      ],
     },
     {
       _id: "13",
@@ -203,15 +211,15 @@ export default function HomeMenu() {
       image: "/CC.jpg",
       category: "chowmein",
     },
-    // {
-    //   _id: "14",
-    //   name: "Grilled Chicken and Cheese Sandwich",
-    //   description:
-    //     "A Grilled Chicken and Cheese Sandwich is a delicious combination of tender grilled chicken and melted cheese sandwiched between two slices of bread. The grilled chicken is typically seasoned with herbs and spices, then grilled until cooked through and flavorful.",
-    //   basePrice: 520,
-    //   image: "/GCCS.png",
-    //   category: "sandwhich",
-    // },
+    {
+      _id: "1ss",
+      name: "Spicy Grilled Chicken",
+      description:
+        "Spicy Grilled Chicken is tender chicken marinated in a blend of spices and grilled to perfection, giving it a smoky flavour with a fiery kick. It’s a simple yet bold dish, perfect for those who enjoy a healthy option with a spicy taste",
+      basePrice: 1290,
+      image: "/sgc.jpg",
+      category: "Stuff Chicken",
+    },
   ];
   return (
     <section className="mt-14">

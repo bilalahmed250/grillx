@@ -74,7 +74,7 @@ export default function MenuPage() {
             <button
               key={category._id}
               type="button"
-              className={`mt-4 rounded-full w-40 px-8 py-2 ml-3 ${
+              className={`mt-4 rounded-full w-40 px-4 py-2 ml-3 ${
                 activeCategory === category.name.toLowerCase()
                   ? "bg-[#FFA500] text-white"
                   : "bg-gray-200"
@@ -102,7 +102,7 @@ export default function MenuPage() {
               ))} */}
             {(() => {
               const filteredItems = menuItems.filter(
-                (item) => item.category.toLowerCase() === c.name.toLowerCase()
+                (item) => item.category.toLowerCase() === c.name.toLowerCase(),
               );
 
               console.log("Filtered Items:", filteredItems); // <-- Console log here

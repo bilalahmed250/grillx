@@ -4,6 +4,7 @@ export const categories = [
   { _id: "1", name: "Soup" },
   { _id: "2", name: "Pizza" },
   { _id: "3", name: "Broast" },
+  { _id: "12", name: "Stuff Chicken" },
   { _id: "4", name: "Fries" },
   { _id: "5", name: "Appetizer" },
   { _id: "6", name: "Burger" },
@@ -54,20 +55,39 @@ export const menuItems = [
     sizes: [
       {
         _id: "s1",
-        name: "Quater 1-Leg, 1-Thigh",
+        name: "Quater Broats - Leg, Thigh, fries , Dip sauce, Bun",
         price: 0,
       },
       {
         _id: "s2",
-        name: "Half Broast 1-Leg, 1-Thigh, 1-Breast, 1-Wing, 1-Bun, 1-fries, 2-Dips",
-        price: 500,
+        name: "Half Broast - 2-Leg, 2-Thigh, 1-Bun, 1-fries, 2-Dips",
+        price: 600,
       },
       {
         _id: "s3",
-        name: "Full Broast 2-Leg, 2-Thigh, 2-Breast, 2-Wing, 2-Bun, 2-fries, 4-Dips",
-        price: 1600,
+        name: "Full Broast - 4-Leg, 4-Thigh,  2-Bun, 2-fries, 4-Dips",
+        price: 1800,
       },
     ],
+  },
+  //Stuff chicken
+  {
+    _id: "1ss",
+    name: "Spicy Grilled Chicken",
+    description:
+      "Spicy Grilled Chicken is tender chicken marinated in a blend of spices and grilled to perfection, giving it a smoky flavour with a fiery kick. It’s a simple yet bold dish, perfect for those who enjoy a healthy option with a spicy taste",
+    basePrice: 1290,
+    image: "/sgc.jpg",
+    category: "Stuff Chicken",
+  },
+  {
+    _id: "1s2s",
+    name: "Chicken à la Kiev",
+    description:
+      "Chicken à la Kiev is a classic dish made with a breaded chicken breast filled with herby garlic butter that melts when cut into. It’s crispy on the outside and juicy inside, offering a rich, buttery flavour with a hint of garlic in every bite.",
+    basePrice: 1290,
+    image: "/cak.jpg",
+    category: "Stuff Chicken",
   },
 
   //Pizza
@@ -231,13 +251,13 @@ export const menuItems = [
     name: "Grill-X Special Pizza",
     description:
       "A Special Pizza is a term used to describe a pizza that typically features a combination of various toppings, making it a more elaborate and flavorful option than a standard pizza. The toppings included on a Special Pizza can vary depending on the preferences of the pizzeria or the customer, but they often include a mix of meats, vegetables, and sometimes even unique ingredients or gourmet toppings. Common toppings found on a Special Pizza may include pepperoni, sausage, mushrooms, onions, bell peppers, olives, tomatoes, and various types of cheese. Some Special Pizzas may also feature premium toppings such as prosciutto, artichoke hearts, sun-dried tomatoes, or truffle oil",
-    basePrice: 750,
+    basePrice: 800,
     image: "/pizza11.jpg",
     category: "pizza",
     sizes: [
       { _id: "s1", name: "small", price: 0 },
       { _id: "s2", name: "medium", price: 500 },
-      { _id: "s3", name: "Large", price: 900 },
+      { _id: "s3", name: "Large", price: 1000 },
     ],
     extraIngredientPrices: [
       { _id: "s1", name: "Extra Topping Cheese small", price: 150 },
@@ -259,7 +279,7 @@ export const menuItems = [
     sizes: [
       { _id: "s1", name: "small", price: 0 },
       { _id: "s2", name: "medium", price: 500 },
-      { _id: "s3", name: "Large", price: 900 },
+      { _id: "s3", name: "Large", price: 1000 },
     ],
     extraIngredientPrices: [
       { _id: "s1", name: "Extra Topping Cheese small", price: 150 },
@@ -282,7 +302,7 @@ export const menuItems = [
     sizes: [
       { _id: "s1", name: "small", price: 0 },
       { _id: "s2", name: "medium", price: 500 },
-      { _id: "s3", name: "Large", price: 900 },
+      { _id: "s3", name: "Large", price: 1000 },
     ],
     extraIngredientPrices: [
       { _id: "s1", name: "Extra Topping Cheese small", price: 150 },
@@ -304,7 +324,7 @@ export const menuItems = [
     sizes: [
       { _id: "s1", name: "small", price: 0 },
       { _id: "s2", name: "medium", price: 500 },
-      { _id: "s3", name: "Large", price: 900 },
+      { _id: "s3", name: "Large", price: 1000 },
     ],
     extraIngredientPrices: [
       { _id: "s1", name: "Extra Topping Cheese small", price: 150 },
@@ -326,7 +346,7 @@ export const menuItems = [
     sizes: [
       { _id: "s1", name: "small", price: 0 },
       { _id: "s2", name: "medium", price: 500 },
-      { _id: "s3", name: "Large", price: 900 },
+      { _id: "s3", name: "Large", price: 1000 },
     ],
     extraIngredientPrices: [
       { _id: "s1", name: "Extra Topping Cheese small", price: 150 },
@@ -340,11 +360,29 @@ export const menuItems = [
 
   //Steak
   {
+    _id: "s61",
+    name: "Chicken Jalapeno Steak",
+    description:
+      "Chicken Jalapeño Steak is a grilled chicken dish seasoned or served with jalapeños, combining smoky char with chili heat.",
+    basePrice: 1290,
+    image: "/cjs.jpg",
+    category: "steak",
+  },
+  {
+    _id: "s622",
+    name: "Chicken Parmesan",
+    description:
+      "Chicken Parmesan is a crispy breaded chicken breast topped with rich tomato sauce and melted cheese, usually mozzarella and parmesan.",
+    basePrice: 1290,
+    image: "/cpp.jpg",
+    category: "steak",
+  },
+  {
     _id: "s6",
     name: "Tarragon Chicken Steak",
     description:
       "Tarragon Steak is a dish featuring a tender steak seasoned with aromatic tarragon herb. The steak is typically seasoned with salt, pepper, and fresh or dried tarragon before being grilled, broiled, or pan-seared to desired doneness.",
-    basePrice: 1050,
+    basePrice: 1290,
     image: "/TSTEAK.jpg",
     category: "steak",
   },
@@ -353,7 +391,7 @@ export const menuItems = [
     name: "Moroccan Chicken Steak",
     description:
       "A tender, juicy **chicken breast** is marinated in bold **Moroccan spices** like cumin, paprika, garlic, and coriander, then grilled to perfection. The steak is full of smoky, earthy flavor with a hint of citrus. Served with a side of **roasted vegetables**, **herbed couscous**, or a light **yogurt sauce**, this dish brings the vibrant taste of Morocco to your plate.",
-    basePrice: 1050,
+    basePrice: 1290,
     image: "/MCS.jpg",
     category: "steak",
   },
@@ -362,7 +400,7 @@ export const menuItems = [
     name: "Garlic Chicken Mushroom Steak",
     description:
       "Garlic Mushroom Steak is a delectable dish featuring a tender steak topped with savory garlic-infused mushrooms. The steak is typically seasoned with salt, pepper, and minced garlic before being grilled, broiled, or pan-seared to desired doneness. Meanwhile, sliced mushrooms are sautéed with garlic, butter, and perhaps some herbs like thyme or rosemary until golden and tender..",
-    basePrice: 1050,
+    basePrice: 1290,
     image: "/GCMS.jpg",
     category: "steak",
   },
@@ -371,7 +409,7 @@ export const menuItems = [
     name: "Chicken Mushroom Steak",
     description:
       "Mushroom Steak is a savory dish featuring a tender steak accompanied by a generous serving of sautéed mushrooms. The steak is typically seasoned with salt, pepper, and any desired herbs or spices before being grilled, broiled, or pan-seared to perfection.",
-    basePrice: 1050,
+    basePrice: 1290,
     image: "/MSS.jpeg",
     category: "steak",
   },
@@ -380,7 +418,7 @@ export const menuItems = [
     name: "Chicken Pepper Steak",
     description:
       "Pepper Steak is a dish featuring tender strips of beef cooked with bell peppers, onions, and a flavorful sauce. The beef is typically seasoned with salt, pepper, and sometimes other spices before being stir-fried or sautéed until browned and cooked to desired doneness. accompanied by a generous serving of sautéed mushrooms. The steak is typically seasoned with salt, pepper, and any desired herbs or spices before being grilled, broiled, or pan-seared to perfection.",
-    basePrice: 1050,
+    basePrice: 1290,
     image: "/PS.webp",
     category: "steak",
   },
@@ -391,7 +429,7 @@ export const menuItems = [
     name: "Shami Burger",
     description:
       "Shami Burger is a flavorful and spicy burger that features a patty made from Shami kebab",
-    basePrice: 250,
+    basePrice: 280,
     image: "/SB.jpg",
     category: "burger",
   },
@@ -400,7 +438,7 @@ export const menuItems = [
     name: "Bun Plaster",
     description:
       "Bun Pluster appears to be a term that is not widely recognized or commonly used in English. It's possible that it might be a regional or niche term specific to a certain cuisine or context",
-    basePrice: 260,
+    basePrice: 290,
     image: "/BPB.jpg",
     category: "burger",
   },
@@ -409,7 +447,7 @@ export const menuItems = [
     name: "Patty Burger",
     description:
       "A thick, juicy **beef patty** sits between two soft, toasted **burger buns**, slightly glossy from melted butter. The patty is grilled to perfection with seared edges and tender, flavorful meat. Topped with **melted cheddar cheese**, crisp **lettuce**, fresh **tomato slices**, **pickles**, and a drizzle of **burger sauce**, the burger is stacked high and ready to be enjoyed. The top bun is gently pressed down, holding everything together in a perfect handheld meal.",
-    basePrice: 310,
+    basePrice: 350,
     image: "/PB.jpg",
     category: "burger",
   },
@@ -423,11 +461,20 @@ export const menuItems = [
     category: "burger",
   },
   {
+    _id: "b4b",
+    name: "Beef Patty Burger",
+    description:
+      "A beef patty burger is a sandwich consisting of a cooked ground beef patty served inside a sliced bread roll or bun.",
+    basePrice: 400,
+    image: "/bpbb.jpg",
+    category: "burger",
+  },
+  {
     _id: "b5",
     name: "Zinger Burger",
     description:
       "A Zinger Burger is a spicy and flavorful chicken sandwich typically consisting of a crispy breaded chicken fillet seasoned with a blend of spices, served on a soft bun with lettuce, mayonnaise or spicy sauce, and sometimes topped with cheese and pickles..",
-    basePrice: 450,
+    basePrice: 460,
     image: "/ZB.jpg",
     category: "burger",
   },
@@ -436,7 +483,7 @@ export const menuItems = [
     name: "Crispy Crunch Burger",
     description:
       "A perfectly fried crispy chicken fillet is the star of this burger, coated in a golden, crunchy batter that delivers a satisfying bite. It's stacked inside a soft, toasted bun with fresh lettuce, tomato slices, and a layer of creamy mayo or spicy sauce. The contrast between the crunchy chicken and the soft bun makes every bite flavorful and irresistible—a true crispy delight!",
-    basePrice: 500,
+    basePrice: 550,
     image: "/CCB.jpg",
     category: "burger",
   },
@@ -445,7 +492,7 @@ export const menuItems = [
     name: "Grilled Chicken Burger",
     description:
       "A Grilled Chicken Burger features a succulent grilled chicken breast served on a soft burger bun, accompanied by crisp lettuce, ripe tomato slices, and creamy mayonnaise or tangy barbecue sauce. It offers a lighter alternative to traditional beef burgers while still delivering delicious flavor and satisfaction.",
-    basePrice: 510,
+    basePrice: 550,
     image: "/GCB.jpg",
     category: "burger",
   },
@@ -454,7 +501,7 @@ export const menuItems = [
     name: "Yum Pum Burger",
     description:
       "Yum Pum Burger is a flavorful burger featuring a juicy beef patty topped with tangy barbecue sauce, melted cheese, crispy bacon, and fresh lettuce and tomato, all nestled within a soft sesame seed bun. It's a mouthwatering delight that satisfies cravings with every bite.",
-    basePrice: 550,
+    basePrice: 580,
     image: "/YPB.jpg",
     category: "burger",
   },
@@ -463,7 +510,7 @@ export const menuItems = [
     name: "Texas Chicken Burger",
     description:
       "A Texas Chicken Burger is a hearty and flavorful sandwich featuring a grilled or fried chicken patty seasoned with Texas-style spices, such as barbecue seasoning or chili powder. It's typically served on a soft bun with toppings like crispy bacon, melted cheese, lettuce, tomato, onion, and a tangy barbecue sauce. This burger offers a taste of the bold and robust flavors often associated with Texan cuisine..",
-    basePrice: 580,
+    basePrice: 600,
     image: "/TCB.jpeg",
     category: "burger",
   },
@@ -472,7 +519,7 @@ export const menuItems = [
     name: "Zinger Tower Burger",
     description:
       "A Zinger Tower Burger is a variation of the classic Zinger Burger, featuring an extra layer of flavor and texture. It typically consists of a spicy breaded chicken fillet, lettuce, mayonnaise or spicy sauce, cheese, and sometimes bacon, all sandwiched between two soft buns. The tower aspect comes from the additional layers of ingredients, providing a more substantial and indulgent eating experience.",
-    basePrice: 610,
+    basePrice: 640,
     image: "/ZTB.jpeg",
     category: "burger",
   },
@@ -501,7 +548,7 @@ export const menuItems = [
     name: "Chicken Shawarma",
     description:
       "Chicken Shawarma is a popular Middle Eastern dish made from thinly sliced marinated chicken that is typically grilled on a vertical rotisserie. The marinated chicken is layered onto a large rotating skewer and slow-roasted until tender and juicy.",
-    basePrice: 260,
+    basePrice: 280,
     image: "/CSW.jpg",
     category: "wrap",
   },
@@ -528,7 +575,7 @@ export const menuItems = [
     name: "Chicken and cheese shawarma",
     description:
       "A soft, warm flatbread or pita is tightly wrapped around juicy, spiced chicken shawarma, cooked on a vertical rotisserie and sliced thin. The filling includes melted cheese, crisp lettuce, tomatoes, and a creamy garlic or tahini sauce. Each bite is rich, cheesy, and packed with bold Middle Eastern flavors, making it a perfect handheld meal.",
-    basePrice: 320,
+    basePrice: 330,
     image: "/CCSW.jpeg",
     category: "wrap",
   },
@@ -555,7 +602,7 @@ export const menuItems = [
     name: "Zinger Wrap",
     description:
       "A Zinger Wrap is a delicious and flavorful wrap made with a crispy breaded or battered chicken fillet, typically seasoned with a spicy blend of spices. The chicken fillet is then wrapped in a soft tortilla or flatbread along with lettuce, tomato, and mayonnaise or spicy sauce.",
-    basePrice: 580,
+    basePrice: 690,
     image: "/ZW.jpeg",
     category: "wrap",
   },
@@ -564,7 +611,7 @@ export const menuItems = [
     name: "Nugg Wrap",
     description:
       "A soft, warm tortilla wrap filled with crispy chicken nuggets, fresh lettuce, juicy tomato slices, and a drizzle of creamy mayo or spicy sauce. The nuggets add a fun, crunchy bite, perfectly balanced by the fresh veggies and soft wrap. It’s a quick, tasty, and satisfying snack—great on the go!",
-    basePrice: 580,
+    basePrice: 690,
     image: "/NW.jpg",
     category: "wrap",
   },
@@ -573,7 +620,7 @@ export const menuItems = [
     name: "Crunchy Chick Wrap",
     description:
       "A Crunchy Chicken Wrap is a delicious and satisfying wrap featuring crispy breaded or battered chicken strips, typically seasoned with flavorful spices. These crispy chicken strips are then wrapped in a soft tortilla or flatbread along with fresh lettuce, ripe tomato slices, and creamy mayonnaise or a zesty sauce",
-    basePrice: 590,
+    basePrice: 690,
     image: "/CCW.jpeg",
     category: "wrap",
   },
@@ -582,7 +629,7 @@ export const menuItems = [
     name: "Tortilla Wrap",
     description:
       "A Tortilla Wrap is a versatile and convenient way to enjoy a variety of fillings wrapped inside a soft, thin flatbread called a tortilla. The tortilla is typically made from flour or corn and is heated briefly on a griddle or skillet to make it pliable before adding fillings.",
-    basePrice: 600,
+    basePrice: 690,
     image: "/TW.jpeg",
     category: "wrap",
   },
@@ -591,7 +638,7 @@ export const menuItems = [
     name: "Shawarma Platter",
     description:
       "A Shawarma Platter typically consists of thinly sliced, marinated meat—such as chicken, beef, or lamb—that has been cooked on a vertical rotisserie. The meat is served on a large platter alongside accompaniments such as rice, salad, pickled vegetables, hummus, tahini sauce, and pita bread or flatbread..",
-    basePrice: 630,
+    basePrice: 650,
     image: "/SPLATER.jpg",
     category: "wrap",
   },
@@ -602,7 +649,7 @@ export const menuItems = [
     name: "Penny Arabiata",
     description:
       "A bowl of penne pasta is coated in a bold and spicy Arrabbiata sauce, made from ripe tomatoes, garlic, and a kick of red chili flakes. The sauce clings to every piece of pasta, delivering heat and rich flavor in every bite. Garnished with fresh parsley and a sprinkle of grated Parmesan cheese, it’s a fiery and satisfying Italian classic.",
-    basePrice: 720,
+    basePrice: 750,
     image: "/PAP.jpeg",
     category: "pasta",
   },
@@ -611,7 +658,7 @@ export const menuItems = [
     name: "Fettuccine Alfredo",
     description:
       "Fettuccine Alfredo is a classic Italian pasta dish made with long, flat noodles (fettuccine) tossed in a creamy sauce made from butter, heavy cream, and Parmesan cheese.",
-    basePrice: 750,
+    basePrice: 800,
     image: "/FAPASTA.jpg",
     category: "pasta",
   },
@@ -620,7 +667,7 @@ export const menuItems = [
     name: "Spicy Fettuccine",
     description:
       "Spicy Fettuccine is a flavorful pasta dish featuring long, flat noodles (fettuccine) cooked until al dente and then tossed in a spicy sauce. The sauce typically includes ingredients such as garlic, red pepper flakes, chili powder, or hot sauce to add heat and flavor.",
-    basePrice: 780,
+    basePrice: 830,
     image: "/SF.jpg",
     category: "pasta",
   },
@@ -629,7 +676,7 @@ export const menuItems = [
     name: "Special Crunchy Pasta",
     description:
       "This unique dish features al dente pasta tossed in a creamy, flavorful sauce and topped with a layer of crispy breadcrumbs or crunchy fried cheese. The contrast between the smooth, rich sauce and the crunchy topping creates a delicious texture in every bite. Finished with herbs and a sprinkle of Parmesan, it’s a comforting and satisfying twist on traditional pasta..",
-    basePrice: 780,
+    basePrice: 830,
     image: "/SCP.jpeg",
     category: "pasta",
   },
@@ -652,6 +699,8 @@ export const menuItems = [
     image: "/VC.png",
     category: "chowmein",
   },
+
+  //sandwich
   {
     _id: "14",
     name: "Grilled Chicken and Cheese Sandwich",
@@ -668,7 +717,7 @@ export const menuItems = [
     name: "Plain fries",
     description:
       "Plain fries are typically made by cutting potatoes into thin strips or wedges, frying them until golden and crispy, and then seasoning them with salt to taste.and fresh or dried tarragon before being grilled, broiled, or pan-seared to desired doneness.",
-    basePrice: 250,
+    basePrice: 280,
     image: "/plainfries.avif",
     category: "fries",
     sizes: [
@@ -681,7 +730,7 @@ export const menuItems = [
     name: "Masala fries",
     description:
       "Masala fries are a flavorful and aromatic variation of traditional French fries, infused with Indian spices for a delicious twist..",
-    basePrice: 280,
+    basePrice: 300,
     image: "/MFries.png",
     category: "fries",
     sizes: [
@@ -689,30 +738,30 @@ export const menuItems = [
       { _id: "s2", name: "Large", price: 150 },
     ],
   },
+  // {
+  //   _id: "3f",
+  //   name: "Garlic Mayo fries",
+  //   description:
+  //     "Garlic mayo fries are crispy golden fries tossed with savory garlic seasoning and topped with a creamy garlic mayonnaise drizzle. They offer a rich, flavorful twist perfect for garlic lovers.",
+  //   basePrice: 400,
+  //   image: "/masalafries.jpg",
+  //   category: "fries",
+  //   sizes: [
+  //     { _id: "s1", name: "Small", price: 0 },
+  //     { _id: "s2", name: "Large", price: 120 },
+  //   ],
+  // },
   {
     _id: "3f",
     name: "Garlic Mayo fries",
     description:
       "Garlic mayo fries are crispy golden fries tossed with savory garlic seasoning and topped with a creamy garlic mayonnaise drizzle. They offer a rich, flavorful twist perfect for garlic lovers.",
-    basePrice: 350,
-    image: "/masalafries.jpg",
-    category: "fries",
-    sizes: [
-      { _id: "s1", name: "Small", price: 0 },
-      { _id: "s2", name: "Large", price: 130 },
-    ],
-  },
-  {
-    _id: "3f",
-    name: "Garlic Mayo fries",
-    description:
-      "Garlic mayo fries are crispy golden fries tossed with savory garlic seasoning and topped with a creamy garlic mayonnaise drizzle. They offer a rich, flavorful twist perfect for garlic lovers.",
-    basePrice: 350,
+    basePrice: 400,
     image: "/PFRIES.png",
     category: "fries",
     sizes: [
       { _id: "s1", name: "Small", price: 0 },
-      { _id: "s2", name: "Large", price: 130 },
+      { _id: "s2", name: "Large", price: 120 },
     ],
   },
   {
@@ -720,12 +769,12 @@ export const menuItems = [
     name: "Pizza fries",
     description:
       "Pizza fries are a mouthwatering fusion of crispy fries topped with tangy pizza sauce, melted mozzarella cheese, and a sprinkle of Italian herbs. They deliver the bold, cheesy flavor of pizza in every bite-sized fry. Perfect as a snack or indulgent side dish, they're a crowd favorite.",
-    basePrice: 420,
+    basePrice: 450,
     image: "/pizzafries.jpg",
     category: "fries",
     sizes: [
       { _id: "s1", name: "Small", price: 0 },
-      { _id: "s2", name: "Large", price: 230 },
+      { _id: "s2", name: "Large", price: 250 },
     ],
   },
   {
@@ -733,12 +782,12 @@ export const menuItems = [
     name: "Loaded fries",
     description:
       "Loaded fries are a deliciously indulgent dish packed with a variety of toppings to create a flavor explosion",
-    basePrice: 420,
+    basePrice: 500,
     image: "/LF.jpg",
     category: "fries",
     sizes: [
       { _id: "s1", name: "Small", price: 0 },
-      { _id: "s2", name: "Large", price: 230 },
+      { _id: "s2", name: "Large", price: 200 },
     ],
   },
 
@@ -746,29 +795,56 @@ export const menuItems = [
 
   {
     _id: "12",
-    name: "Crispy Chicken Strips",
+    name: "Grilled Chicken Wings",
     description:
-      "Chicken Stripe Wings could potentially refer to chicken wings that have been prepared.",
-    basePrice: 350,
-    image: "/CWS.png",
+      "Grilled Wings could potentially refer to chicken wings that have been prepared.",
+    basePrice: 330,
+    image: "/grilledch.jpg",
     category: "appetizer",
     sizes: [
       { _id: "s1", name: "5-Pieces", price: 0 },
-      { _id: "s2", name: "10-Pieces", price: 330 },
+      { _id: "s2", name: "10-Pieces", price: 310 },
+    ],
+  },
+  {
+    _id: "111c",
+    name: "Crispy Chicken Wings",
+    description:
+      "Crispy chicken wings are a popular deep-fried dish made from chicken wings seasoned or marinated and cooked until the skin becomes golden and crunchy.",
+    basePrice: 390,
+    image: "/CCW.jpeg",
+    category: "appetizer",
+    sizes: [
+      { _id: "s1", name: "5-Pieces", price: 0 },
+      { _id: "s2", name: "10-Pieces", price: 370 },
     ],
   },
 
   {
     _id: "1a",
-    name: "Honey Wings",
+    name: "Sesame Honey Wings",
     description:
-      "Honey Chili Wings are succulent chicken wings coated in a sticky and sweet honey chili sauce, offering a perfect balance of sweetness and spiciness. These wings are typically baked or fried until crispy and then tossed in the flavorful sauce, creating a mouthwatering combination of flavors",
-    basePrice: 390,
-    image: "/HWA.jpg",
+      "Sesame Honey Wings are crispy chicken wings coated in a sticky glaze made from honey, soy sauce, and sesame seeds",
+    basePrice: 500,
+    image: "/shw.jpg",
     category: "appetizer",
     sizes: [
       { _id: "s1", name: "5-pieces", price: 0 },
-      { _id: "s2", name: "10-pieces", price: 330 },
+      { _id: "s2", name: "10-pieces", price: 480 },
+    ],
+  },
+
+  {
+    _id: "1as",
+    name: "Sweet Chilli Wings",
+    description:
+      "Sweet Chilli Wings are crispy fried or baked chicken wings coated in a sticky, tangy-sweet chili sauce",
+    basePrice: 500,
+    image: "/scw.jpg",
+    category: "appetizer",
+    sizes: [
+      { _id: "s1", name: "5-pieces", price: 0 },
+      { _id: "s2", name: "10-pieces", price: 480 },
     ],
   },
   {
@@ -776,7 +852,7 @@ export const menuItems = [
     name: "Chicken Nugget with Fries",
     description:
       "Chicken nuggets are bite-sized pieces of chicken that are breaded and fried until crispy and golden brown. They're typically made from ground or finely chopped chicken meat mixed with seasonings and binders, then coated in breadcrumbs or batter before frying.",
-    basePrice: 390,
+    basePrice: 420,
     image: "/CNA.jpg",
     category: "appetizer",
   },
@@ -794,7 +870,7 @@ export const menuItems = [
     name: "Crispy Chicken strips with fries",
     description:
       "crispy chicken strips lie side by side on a plate, their crunchy breadcrumb coating glistening slightly with heat. Each strip is perfectly cooked—juicy and tender on the inside, with a satisfying crunch on the outside. Beside them, a generous serving of hot, seasoned fries is piled high, lightly salted and golden brown. A small dipping cup of creamy ranch or spicy ketchup adds the finishing touch, making this a classic, mouthwatering comfort food combo.",
-    basePrice: 550,
+    basePrice: 600,
     image: "/CCFA.jpg",
     category: "appetizer",
   },
@@ -814,7 +890,7 @@ export const menuItems = [
     name: "Chicken Sandwich",
     description:
       "A Chicken Sandwich is a popular and versatile dish consisting of cooked chicken placed between two slices of bread or served on a bun. The chicken can be prepared in various ways, such as grilled, roasted, fried, or shredded, depending on personal preference.",
-    basePrice: 310,
+    basePrice: 330,
     image: "/CS.avif",
     category: "sandwich",
   },
@@ -823,25 +899,25 @@ export const menuItems = [
     name: "Chicken Tikka Sandwich",
     description:
       "A Chicken Sandwich is a popular and versatile dish consisting of cooked chicken placed between two slices of bread or served on a bun. The chicken can be prepared in various ways, such as grilled, roasted, fried, or shredded, depending on personal preference.",
-    basePrice: 310,
+    basePrice: 380,
     image: "/CS.webp",
     category: "sandwich",
   },
-  {
-    _id: "c2",
-    name: "Chicken Sandwich",
-    description:
-      "Tender, marinated chicken tikka pieces are grilled to perfection and packed into a fresh toasted sandwich bun or bread slices. The chicken is full of smoky, spiced flavor and is paired with crisp lettuce, onion slices, and a layer of mint yogurt chutney or creamy mayo. Each bite offers a delicious fusion of bold Indian spices and classic sandwich comfort.",
-    basePrice: 380,
-    image: "/CTS.jpeg",
-    category: "sandwich",
-  },
+  // {
+  //   _id: "c2",
+  //   name: "Chicken Sandwich",
+  //   description:
+  //     "Tender, marinated chicken tikka pieces are grilled to perfection and packed into a fresh toasted sandwich bun or bread slices. The chicken is full of smoky, spiced flavor and is paired with crisp lettuce, onion slices, and a layer of mint yogurt chutney or creamy mayo. Each bite offers a delicious fusion of bold Indian spices and classic sandwich comfort.",
+  //   basePrice: 380,
+  //   image: "/CTS.jpeg",
+  //   category: "sandwich",
+  // },
   {
     _id: "c3",
     name: "Grilled Chicken and cheese Sandwich",
     description:
       "A Grilled Chicken and Cheese Sandwich is a delicious combination of tender grilled chicken and melted cheese sandwiched between two slices of bread. The grilled chicken is typically seasoned with herbs and spices, then grilled until cooked through and flavorful..",
-    basePrice: 510,
+    basePrice: 550,
     image: "/GCCS.png",
     category: "sandwich",
   },
@@ -850,7 +926,7 @@ export const menuItems = [
     name: "Classic Club Sandwich",
     description:
       "A classic sandwich typically consists of two slices of bread with a filling placed between them. The filling can vary widely and may include ingredients such as sliced meats (like ham, turkey, or roast beef), cheese, lettuce, tomato, onion, pickles, and condiments like mayonnaise, mustard, or ketchup",
-    basePrice: 550,
+    basePrice: 580,
     image: "/CCSS.jpg",
     category: "sandwich",
   },
